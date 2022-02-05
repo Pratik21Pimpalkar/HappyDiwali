@@ -1,0 +1,306 @@
+/*  SKY COLORS   */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  animation: day 15s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes day {
+  50% {
+    background-color: #6ed9e7;
+  }
+  40% {
+    background-color: #c7e1e5;
+  }
+  30% {
+    background-color: #ffef7a;
+  }
+  25% {
+    background-color: #f7c16a;
+  }
+  20% {
+    background-color: #f46a55;
+  }
+  0% {
+    background-color: #0d0058;
+  }
+
+  60% {
+    background-color: #05e2ff;
+  }
+  70% {
+    background-color: #ffef7a;
+  }
+  80% {
+    background-color: #f7c16a;
+  }
+  90% {
+    background-color: #f46a55;
+  }
+  100% {
+    background-color: #07012a;
+    /* background-color: #000000; */
+  }
+}
+
+/* Sunrise and Sunset */
+
+.sun {
+  background-color: #e45604;
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 14px #d8cd00;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  animation: sunrise 15s forwards ease-in-out;
+}
+
+@keyframes sunrise {
+  0% {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+  }
+  10% {
+    position: absolute;
+    top: 55%;
+    left: 18%;
+  }
+  20% {
+    position: absolute;
+    top: 40%;
+    left: 26%;
+  }
+  30% {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+  }
+  40% {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+  }
+  50% {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+  }
+
+  55% {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+  }
+  65% {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+  75% {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+  }
+  100% {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+  }
+}
+
+/* Night */
+
+.moon {
+  background-color: transparent;
+  position: absolute;
+  left: 11%;
+  top: 10%;
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+  box-shadow: -20px 10px white;
+  opacity: 1;
+  animation: night 15s forwards;
+  animation-delay: 0s;
+}
+@keyframes night {
+  5% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
+/* Crackers */
+
+#fireworks {
+  justify-content: center;
+  display: flex;
+  opacity: 1;
+  animation: group 18s forwards;
+}
+@keyframes group {
+  0%,
+  97% {
+    opacity: 0;
+  }
+}
+
+/* Happy Diwali Text */
+
+#text {
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  font-family: "Caveat", cursive;
+  position: absolute;
+  left: 58%;
+  color: white;
+  font-size: 8vh;
+  animation: textanimate 2s infinite forwards ease-out;
+  animation-delay: 18s;
+}
+@keyframes textanimate {
+  0% {
+    opacity: 1;
+    color: #ffb319;
+  }
+  20% {
+    opacity: 1;
+    color: #ffe194;
+  }
+  40% {
+    opacity: 1;
+    color: #91c788;
+  }
+  60% {
+    opacity: 1;
+    color: #98ddca;
+  }
+  80% {
+    opacity: 1;
+    color: #f2bb7b;
+  }
+  100% {
+    opacity: 1;
+    color: #c2f784;
+  }
+}
+
+/* Road and Car */
+
+#road {
+  position: absolute;
+  bottom: 0px;
+  height: 13.1rem;
+  width: 100%;
+}
+
+#fullcar {
+  position: relative;
+  bottom: 0rem;
+  right: -100%;
+  animation: cars 10s forwards infinite ease-in-out;
+  animation-delay: 0ms;
+  z-index: 3;
+}
+
+@keyframes cars {
+  0% {
+    transform: translate(-190%, -12px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+#front-wheels ,#back-wheels{
+  animation: roll 1s linear infinite;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+#front-wheels {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 20.9rem;
+}
+#back-wheels {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 2rem;
+}
+
+/* Building and its lighting */
+
+#building {
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 25vh;
+  animation: blank 15s forwards;
+}
+
+@keyframes blank {
+  0%,
+  95% {
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+#buildinglights1 {
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 25vh;
+  animation: series 1s forwards;
+  animation-delay: 16s;
+}
+#buildinglights2 {
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 25vh;
+  animation: disco 1s infinite forwards;
+  animation-delay: 16s;
+}
+@keyframes disco {
+  0% {
+    z-index: -1;
+  }
+}
+/* @keyframes series {
+  0%,
+  86% {
+    z-index: -2;
+  }
+} */
+#buildingnight {
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 25vh;
+  animation: lights 15s forwards;
+}
+
+@keyframes lights {
+  0%,
+  86% {
+    z-index: -1;
+  }
+}
