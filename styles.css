@@ -208,7 +208,7 @@ body {
   bottom: 0rem;
   right: -100%;
   animation: cars 10s forwards infinite ease-in-out;
-  animation-delay: 0ms;
+  animation-delay:0ms;
   z-index: 3;
 }
 
